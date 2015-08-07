@@ -356,7 +356,7 @@
 // adapter for the completion block
 - (id <SDWebImageOperation>) downloadWithURL:(NSURL *) url options:(SDWebImageOptions) options progress:(SDWebImageDownloaderProgressBlock) progressBlock completed:(SDWebImageCompletedWithFinishedBlock) completedBlock
 {
-    return [self downloadImageWithURL:url options:options progress:progressBlock
+    return [self downloadImageWithURL:url options:options progress:progressBlock preview:nil completed:<#^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL)completedBlock#> dataTransformation:<#^NSMutableData *(NSData *data, NSData *preview)dataTransformationBlock#>
                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
                 if (completedBlock) {
                     completedBlock(image, error, cacheType, finished);
